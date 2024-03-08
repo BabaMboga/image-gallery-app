@@ -7,7 +7,7 @@ function App() {
      useEffect (() => {
         // API call for fetching images
 
-        axios.get('https://picsum.photos/v2/list')
+        axios.get(`https://api.unsplash.com/photos?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`)
         .then(function (response) {
             //handle success
             updatePhotoGalleryArray(response.data)
