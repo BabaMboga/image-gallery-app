@@ -7,7 +7,7 @@ function App() {
      useEffect (() => {
         // API call for fetching images
 
-        axios.get(`https://api.unsplash.com/photos?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`)
+        axios.get(`http://localhost:3000/pictures`)
         .then(function (response) {
             //handle success
             updatePhotoGalleryArray(response.data)
@@ -27,8 +27,8 @@ function App() {
                     photoGalleryArray.map((photoGalleryArrayItem, index) => {
                         return (
                             <div key={index} className="col-lg-4 col-md-4 col-sm-12 p-1">
-                                <img src={photoGalleryArray.downlaod_url}
-                                    alt={`image_${photoGalleryArrayItem.id}`}
+                                <img src={photoGalleryArrayItem.img_url}
+                                    alt={`image_${photoGalleryArrayItem.name}`}
                                     height="300"
                                     width="400"
                                 />
