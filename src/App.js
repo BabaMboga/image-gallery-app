@@ -8,7 +8,7 @@ function App() {
      useEffect (() => {
         // API call for fetching images
 
-        axios.get(`http://localhost:3000/pictures`)
+        axios.get(`https://pseudo-data.onrender.com/pictures`)
         .then(function (response) {
             //handle success
             updatePhotoGalleryArray(response.data)
