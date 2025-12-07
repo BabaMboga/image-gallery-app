@@ -25,9 +25,11 @@ function App() {
                 {
                     photoGalleryArray.map((photoGalleryArrayItem, index) => {
                         return (
-                            <div key={index} className="col-lg-4 col-md-4 col-sm-12 p-1">
+                            <div key={index} className="col-lg-4 col-md-4 col-sm-12 p-1 relative shadow-lg">
                                 <img src={photoGalleryArrayItem.img_url}
                                     alt={`image_${photoGalleryArrayItem.name}`}
+                                    fill
+                                    className='w-full h-full'
                                     
                                 />
                             </div>
